@@ -35,4 +35,8 @@ class Zombie extends ReLogoTurtle {
 	def infect(Human human){
 		human.infected = true
 	}
+	
+	def moreZombieBehavior(){
+		//some code goes here.
+	}
 }
