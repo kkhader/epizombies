@@ -16,13 +16,17 @@ class Human extends ReLogoTurtle {
 	def infectionTime=0
 	
 	def step() {
-		def winner = minOneOf(neighbors(), {count(zombiesOn(it))})
+		
+		def winner = minOneOf(neighbors()) {
+			count(zombiesOn(it))
+			}
 			
 		face(winner)
 		forward(1.5)
 		
 		if (infected){
 			infectionTime++
+			
 			if (infectionTime >= gestationPeriod){
 				hatchZombies(1){
 					size=2
@@ -32,5 +36,13 @@ class Human extends ReLogoTurtle {
 		}
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "Human [infected=" + infected + ", infectionTime="
+				+ infectionTime + "]";
+	}
+	
+	
 	
 }
