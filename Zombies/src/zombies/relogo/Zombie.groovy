@@ -25,6 +25,7 @@ class Zombie extends ReLogoTurtle {
 			def infectee = oneOf(humansHere())
 			infect(infectee)
 			createInfectionTo(infectee)
+			System.out.println(infectee.toString());
 		}
 		else {
 			label=""
