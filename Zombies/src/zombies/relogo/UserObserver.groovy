@@ -22,7 +22,7 @@ class UserObserver extends ReLogoObserver{
 			setDefaultShape(Zombie, "zombie")
 			createZombies(numZombies){
 				setxy(randomXcor(),randomYcor())
-				size=2
+				size=1
 			}
 			
 		}
