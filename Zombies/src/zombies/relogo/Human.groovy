@@ -26,7 +26,15 @@ class Human extends ReLogoTurtle {
 		
 		if (infected){
 			infectionTime++
-			
+			if (infectionTime == 1){
+			label = "Oh gosh, this isn't good! I don't feel well... I did NOT expect this today :-("
+			}
+			if (infectionTime == 2){
+			label = "Boy, this has been a rough day! I feel like I'm really going downhill..."
+			}
+			if (infectionTime > 2){
+			label = "I really don't feel well! I think I've lost about " + infectionTime/gestationPeriod*100 + "% of my life-force"
+			}
 			if (infectionTime >= gestationPeriod){
 				hatchZombies(1){
 					size=1
